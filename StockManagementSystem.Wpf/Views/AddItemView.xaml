@@ -1,0 +1,39 @@
+﻿<Window x:Class="StockManagementSystem.Wpf.Views.AddItemView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StockManagementSystem.Wpf.Views"
+        mc:Ignorable="d"
+        Title="Add Item" MinHeight="500" MinWidth="500" Height="500" Width="500">
+    <StackPanel Margin="10">
+        <TextBlock Text="Id" Margin="10,10,10,0" />
+        <TextBox x:Name="idTxtBox" Margin="10" />
+     
+        <TextBlock Text="Name"
+                   Margin="10,10,10,0" />
+        <TextBox x:Name="nameTxtBox"
+                 Margin="10" />
+
+        <TextBlock Text="Description"
+                   Margin="10,10,10,0" />
+        <TextBox x:Name="descriptionTxtBox"
+                 Margin="10" />
+
+        <TextBlock Text="Purchased On"
+                   Margin="10,10,10,0" />
+        <DatePicker  x:Name="date" Margin="10"/>
+        <TextBox x:Name="dateTxtBox"
+                 Margin="10">
+            <TextBox.ToolTip>
+                <TextBlock Text="For Testing Only, Enter the time in seconds to simulate purchase in the past " />
+            </TextBox.ToolTip>
+        </TextBox>
+        <StackPanel>
+            <Button x:Name="saveBtn" Click="saveBtn_Click" Content="Save"
+                    Margin="10"
+                    Padding="10" />
+            <Button x:Name="cancelBtn" Click="cancelBtn_Click" Content="Cancel" Margin="10" Padding="10" />
+        </StackPanel>
+    </StackPanel>
+</Window>
